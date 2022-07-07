@@ -1,0 +1,22 @@
+{
+  "name": "genesis-vite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.pro.js",
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "vue": "2.7.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "vite": "^2.9.13",
+    "vue-server-renderer": "^2.7.3"
+  }
+}
