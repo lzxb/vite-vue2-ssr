@@ -1,12 +1,11 @@
 <template>
-    <div class="demo">Demo</div>
+    <!-- <div class="demo">Demo</div> -->
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default {
     name: 'demo'
-})
+}
 </script>
 <style>
 .demo {

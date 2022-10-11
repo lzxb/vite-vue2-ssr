@@ -5,9 +5,7 @@ export async function render () {
     const renderer = createRenderer({ 
         inject: true
      })
-     const ctx = {
-        _registeredComponents: new Set()
-     };
+     const ctx = {};
     const html = await renderer.renderToString(createApp(), ctx);
     return html;
 
