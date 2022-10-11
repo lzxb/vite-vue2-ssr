@@ -1,6 +1,8 @@
-const fs = require('fs')
-const path = require('path')
-const express = require('express')
+import fs from 'fs';
+import path from 'path';
+import express from 'express';
+import { render } from './dist/server/entry-server.js';
+
 
 async function createServer() {
   const app = express()
@@ -17,11 +19,9 @@ async function createServer() {
   
     try {
       let template = fs.readFileSync(
-        path.resolve(__dirname, './dist/client/index.html'),
+        path.resolve('./dist/client/index.html'),
         'utf-8'
       )
-  
-      const { render } = await require('./dist/server/entry-server');
 
       const appHtml = await render(url)
 

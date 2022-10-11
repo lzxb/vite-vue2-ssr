@@ -1,7 +1,7 @@
-const fs = require('fs')
-const path = require('path')
-const express = require('express')
-const { createServer: createViteServer } = require('vite')
+import fs from 'fs';
+import path from 'path';
+import express from 'express';
+import { createServer as createViteServer } from 'vite';
 
 async function createServer() {
   const app = express()
@@ -21,7 +21,7 @@ async function createServer() {
     try {
       // 1. 读取 index.html
       let template = fs.readFileSync(
-        path.resolve(__dirname, 'index.html'),
+        path.resolve('index.html'),
         'utf-8'
       )
   

@@ -10,7 +10,7 @@ export default defineComponent({
         // Run ok
         // demo: () => import('./demo.vue').then(m => m.default),
         // Run Error
-        demo: () => import('./demo.vue')
+        demo: () => import('./demo.vue').then(m => m.default)
     },
     data () {
         return {
